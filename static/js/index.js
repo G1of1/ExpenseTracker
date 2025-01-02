@@ -2,7 +2,7 @@ const list = document.getElementById('expense-list');
 async function fetchExpenses()
 {
     try {
-        //Recieve data from the database
+        //Receive data from the database
         const response = await fetch('/expenses');
         const expenses = await response.json();
         //Format the data into the list item elements
@@ -45,7 +45,7 @@ async function addExpense()
         amount: parseFloat(amount),
         date: date
     };
-    //Load up database and add the object into the database using json file formatting
+    //Add the object into the database using json file formatting
     try {
         await fetch('/expenses', {
             method: 'POST',
@@ -56,7 +56,7 @@ async function addExpense()
         });
 
         fetchExpenses(); // Refresh expense list
-        updateBudget();
+        updateBudget(); //Update the budget information
         document.getElementById('expense-name').value = "";
         document.getElementById('expense-category').selectedIndex = 0;  // Fix the typo here
         document.getElementById('expense-amount').value = "";
@@ -92,8 +92,8 @@ async function deleteExpense(expense_id)
         }
         deleteMessage.textContent = "Expense has been deleted";
         setTimeout(function(){deleteMessage.style.display = "none"}, 3000);
-        fetchExpenses();
-        updateBudget();
+        fetchExpenses(); //Update web page
+        updateBudget(); // Update web page
         
     }
     catch(error)
@@ -113,7 +113,7 @@ async function setBudget()
     {
         amount: parseFloat(budget_value)
     };
-    //Send it to the budget db
+    //Send it to the budget database
     try {
         await fetch('/budget', {
             method: 'POST',

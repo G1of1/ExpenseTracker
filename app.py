@@ -45,7 +45,9 @@ def handle_expenses():
             return jsonify({"message": "Expense added successfully"}), 201
         except Exception as e:
             return jsonify({"error": str(e)}), 500
-        
+
+
+
 @app.route('/expenses/<int:expense_id>', methods=['DELETE'])
 def delete_expense(expense_id):
     try:
@@ -56,11 +58,6 @@ def delete_expense(expense_id):
         return jsonify({"message": "Expense deleted"})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
-        
-
-
-            
 
 
 # ---------- BUDGET ROUTES ----------
