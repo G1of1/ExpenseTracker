@@ -1,0 +1,118 @@
+body 
+{
+  font-family: "Poppins", sans-serif;
+  padding: 20px;
+  background-color: black;
+}
+  
+.container 
+{
+  background: linear-gradient(135deg, rgb(33, 33, 156), rgb(255, 166, 1));
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 15px;
+
+}
+  
+h1 
+{
+  text-align: center;
+}
+  
+.add-expense, .view-expenses, .set-budget, .total-expenses 
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+    
+}
+  
+  input, select, button 
+{
+  margin: 10px 5px;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  width: 80%;
+  box-sizing: border-box;
+    
+}
+
+  input, select
+{
+  background: rgba(128, 128, 128, 0.374);
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: black;
+}
+
+button
+{
+  background: linear-gradient(135deg, yellowgreen, rgb(15, 115, 158));
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: background-position 3s ease-in-out, box-shadow 0.5s;
+  background-size: 200% 200%;
+  background-position: left top;
+}
+button:hover
+{
+  box-shadow: 2px 2px 15px black;
+  background: linear-gradient(135deg, rgb(15, 115, 158), yellowgreen);
+  background-position: right bottom;
+}
+button:active
+{
+  background: linear-gradient(135deg, blue, orange);
+}
+input::placeholder
+{
+  color:rgb(61, 58, 58);
+}
+#expense-list
+{
+  display:flex;
+  flex-direction: column;
+  justify-content:left;
+}
+#expense-list li
+{
+  background: rgba(255, 255, 255, 0.345);
+  min-width: 300px;
+  min-height: 100px;
+  margin: 10px;
+  border-radius: 15px;
+  padding: 10px;
+  list-style: none;
+  user-select: none;
+  cursor: pointer;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+}
+
+#expense-list li:hover
+{
+  
+  background: rgba(255, 255, 255, 0.507);
+}
+#expense-list li:active
+{
+  background:rgba(119, 116, 116, 0.507);
+}
+
+.delete
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 25px;
+  text-align: center;
+}

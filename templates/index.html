@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/images/money.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        
+        <!-- Add Expense Section -->
+        <div class="add-expense">
+
+
+    <h2>Add Expense</h2>
+    <input id="expense-name" placeholder="Name">
+    <select id="expense-category">
+      <option value="Food">Food</option>
+      <option value="Fun">Fun</option>
+      <option value="Bills">Bills</option>
+      <option value="Groceries">Groceries</option>
+      <option value="Other">Other</option>
+    </select>
+    <input id="expense-amount" placeholder="Amount: Format(Ex. 12.34)">
+    <input id="expense-date" placeholder="Date: Format. MM-DD-YYYY">
+    <button onclick="addExpense()">Add Expense</button>
+    <p id="add-message"></p>
+
+    <h2>Expenses</h2>
+    <ul id="expense-list">
+      <li>Expense 1</li>
+      <li>Expense 2</li>
+      <li>Expense 3</li>
+    </ul>
+    <p id="error-message"></p>
+    <p id="delete-expense"></p>
+
+    <h2>Budget</h2>
+    <input id="budget-amount" placeholder="Budget Amount">
+    <button onclick="setBudget()">Set Budget</button>
+    <p id="budget-error"></p>
+    <p id="budget-info"></p>
+    <p id="total-expense"></p>
+      </div>
+    <script src="static/js/index.js"></script>
+</body>
+</html>
