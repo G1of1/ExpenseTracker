@@ -2,9 +2,10 @@ const list = document.getElementById('expense-list');
 async function fetchExpenses()
 {
     try {
+        //Recieve data from the database
         const response = await fetch('/expenses');
         const expenses = await response.json();
-
+        //Format the data into the list item elements
         const expenseList = document.getElementById('expense-list');
         expenseList.innerHTML = ''; // Clear existing list
 
@@ -83,6 +84,7 @@ async function deleteExpense(expense_id)
         }
     try
     {
+        //Use the API to delete the specific expense using its ID
         const response = await fetch(`/expenses/${expense_id}`, {method: 'DELETE'});
         if(!response.ok)
         {
@@ -144,7 +146,7 @@ async function updateBudget()
             {
                 throw new Error(`Error: ${response.status}`);
             }
-
+            //Use the total expenses to calculate if budget has been surpassed. If it has, then display the difference.
         const totalExpenses = await getTotalExpenses();
             if(totalExpenses > budget)
             {
