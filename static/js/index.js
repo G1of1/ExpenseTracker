@@ -58,7 +58,7 @@ async function addExpense()
         fetchExpenses(); // Refresh expense list
         updateBudget(); //Update the budget information
         document.getElementById('expense-name').value = "";
-        document.getElementById('expense-category').selectedIndex = 0;  // Fix the typo here
+        document.getElementById('expense-category').selectedIndex = 0;
         document.getElementById('expense-amount').value = "";
         document.getElementById('expense-date').value = "";
 
